@@ -11,8 +11,5 @@
 ### OS: Arch Linux
 ### Kernel: x86_64 Linux 5.1.5-arch1-2-ARCH
 ### Shell: bash 5.0.7
-### Resolution: 1920x1080
 ### WM: i3
-### CPU: Intel Core i5-8250U
-### GPU: GeForce MX150
-### RAM: 8GB
+### Compton: https://github.com/tryone144/compton
