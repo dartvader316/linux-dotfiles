@@ -1,7 +1,6 @@
 #!/bin/sh
 
 xrandr --auto
-#sudo /usr/bin/prime-switch
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -53,7 +52,6 @@ fi
 
 exec i3
 /usr/bin/prime-offload
-echo "launched" >> gui
 
 #twm &
 #xclock -geometry 50x50-1+1 &
