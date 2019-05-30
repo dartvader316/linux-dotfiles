@@ -3,7 +3,7 @@
 ## * YOU are choosing to make these modifications, and if you point the finger at me for messing up your device, I will laugh at you. 
 ## * Your warranty will be void if you tamper with any part of your device / software.
 
-# Read
+# Read Me
 
 ## Its only my current setup what tested ONLY in my pc's.
 ### My current setup info:
