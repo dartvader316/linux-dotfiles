@@ -12,4 +12,4 @@
 ### Kernel: x86_64 Linux 5.1.5-arch1-2-ARCH
 ### Shell: bash 5.0.7
 ### WM: i3
-### Compton: https://github.com/tryone144/compton
+### Compton: [tryone144/compton](https://github.com/tryone144/compton)
