@@ -1,34 +1,18 @@
-;==========================================================
-;
-;
-;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/jaagr/polybar
-;
-;   The README contains alot of information
-;
-;==========================================================
+
+;Polybar config by dartvader316
 
 [colors]
-ws_unselected = #737373
-maincolor =#008080
+defaultfontcolor = #DDDDDD
 background = ${xrdb:color0:#cc000000}
-;background = ;222
-background-opacity = 0;
-background-alt = #444
-;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
-foreground-alt = #555
-primary = #008080
-secondary = #e60053
-alert = #bd2c40
+backgroup-opacity = 0
+border-color = ;
+
+ws_selected = ${colors.defaultfontcolor}
+ws_unselected = #737373
+
+warncolor = #e60053
+
+nocolor = #FF0000
 [icons]
 workspace = ""
 
@@ -38,27 +22,23 @@ width = 100%
 height = 30
 ;offset-x = 1%
 ;offset-y = 1%
-radius = 0
 fixed-center = true
 
 background = ${colors.background}
-foreground = ${colors.foreground}
+foreground = ${colors.defaultfontcolor}
 
 line-size = 3
 line-color = #f00
 
 border-size = 0
-border-color = #00000000
+border-color = ${colors.border-color}
 
 padding-left = 0
-padding-right = 1 ;old:2
+padding-right = 1
 
 module-margin-left = 1
 module-margin-right = 2
 
-;font-0 = fixed:pixelsize=10;1
-;font-1 = unifont:fontformat=truetype:size=8:antialias=true;0
-;font-2 = siji:pixelsize=10;1
 font-0 = "Roboto:size=12:antialias=true"
 font-1 = "MaterialIcons:size=15:antialias=true;3"
 
@@ -69,10 +49,8 @@ modules-right = xkeyboard  wlan battery temperature GPUid
 
 tray-position = none
 tray-padding = 2
-;tray-background = #0063ff
 
 ;wm-restack = i3
-
 ;override-redirect = true
 
 ;scroll-up = i3wm-wsnext
@@ -81,30 +59,19 @@ tray-padding = 2
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:30:...%
-
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
-
 format-prefix = " "
-
+;format-foreground = ${colors.nocolor}
 label-layout =%layout%
-;label-layout =%name%
 label-indicator =""
-;label-layout-underline = ${colors.maincolor}
-;label-indicator-padding = 2
-;label-indicator-margin = 1
-;label-indicator-background = ${colors.maincolor}
-;label-indicator-underline = ${colors.secondary}
-
 
 [module/i3]
 type = internal/i3
-
 format = <label-state> <label-mode>
+;format-foreground = ${colors.nocolor}
+
 index-sort = true
 wrapping-scroll = false
 ws-icon-0 = "1;"
@@ -122,47 +89,38 @@ ws-icon-default = ""
 
 label-mode-padding = 2
 label-mode-foreground = #000
-label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-
 label-focused = %icon% 
-;${icons.workspace}
-;label-focused-foreground = ${colors.primary}
-;label-focused-background = ${colors.background-alt}
-;label-focused-underline= ${colors.primary}
+label-focused-foreground = ${colors.ws_selected}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %icon%
 label-unfocused-foreground = ${colors.ws_unselected}
-;${icons.workspace}
 label-unfocused-padding = 2
 
-; visible = Active workspace on unfocused monitor
-label-visible = %icon%
+;=============================================;
+;Multiple Monitors settings,maybe someday i buy second monitor....
+;
+;visible = Active workspace on unfocused monitor
+;label-visible = %icon%
 ;${icons.workspace}
-label-visible-foreground = ${colors.ws_unselected}
-;${self.label-focused-foreground}
+;label-visible-foreground = ${colors.nocolor}
 ;label-visible-background = ${self.label-focused-background}
-label-visible-padding = ${self.label-focused-padding}
-
-; urgent = Workspace with urgency hint set
-label-urgent = %icon% 
-label-urgent-foreground = ${colors.ws_unselected}
-;${icons.workspace}
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
-; Separator in between workspaces
-; label-separator = |
+;label-visible-padding = ${self.label-focused-padding}
+;rgent = Workspace with urgency hint set
+;label-urgent = %icon% 
+;label-urgent-foreground = ${colors.noclor}
+;label-urgent-background = ${colors.alert}
+;label-urgent-padding = 2
+;=============================================;
 
 [module/cpu]
 type = internal/cpu
 interval = 2
 format-prefix = ""
-;format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+;format-foreground = ${colors.fontcolor}
 label = %percentage:2%%
 
 [module/wlan]
@@ -171,16 +129,13 @@ interface = wlp2s0
 interval = 3.0
 
 format-connected = <label-connected>
-;format-connected-underline = #9f78e1
+;format-connected-foreground = ${colors.nocolor}
 format-connected-prefix = " "
 label-connected = %essid%
 
-
 format-disconnected-prefix = " "
+;format-disconnected-foreground = ${colors.nocolor}
 format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/date]
 type = internal/date
@@ -192,11 +147,8 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix =
-format-prefix-foreground = ${colors.foreground-alt}
-;format-underline = #0a6cf5
-
 label = %date% %time%
+;format-foreground = ${colors.color}
 
 [module/battery]
 type = internal/battery
@@ -206,15 +158,15 @@ full-at = 98
 
 format-charging-prefix = ""
 format-charging = <label-charging>
-;format-charging-underline = #ffb52a
+;format-charging-foreground = ${colors.nocolor}
 
 format-discharging-prefix = "󠀁"
 format-discharging = <label-discharging>
-;format-discharging-underline = ${self.format-charging-underline}
+;format-discharging-foreground = ${colors.nocolor}
 
-format-full-prefix = "󠀁"
-;format-full-prefix-foreground = ${colors.foreground-alt}
-;format-full-underline = ${self.format-charging-underline}
+format-full-prefix = "󠀁
+format-full = <label-full>
+;format-full-foreground = ${colors.nocolor}
 
 [module/temperature]
 type = internal/temperature
@@ -222,20 +174,22 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <label>
-;format-underline = #f90000
-format-warn = <label-warn>
-;format-warn-underline = ${self.format-underline}
+;format-foreground = ${colors.nocolor}
 format-prefix = " "
 label = %temperature-c%
+
+format-warn = <label-warn>
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label-warn-foreground = ${colors.warncolor}
 
 [module/GPUid]
 type = custom/script
 exec = ~/.config/scripts/getGPUid.sh
 format = <label>
+;format-foreground = ${colors.nocolor}
 format-prefix = " "
 label = %output%
+
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
