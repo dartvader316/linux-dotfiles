@@ -11,7 +11,7 @@
 ### OS: Arch Linux
 ### Kernel: x86_64 Linux 5.1.5-arch1-2-ARCH
 ### Shell: bash 5.0.7
-### WM: i3
+### WM: i3-gaps
 ### Compton: [tryone144/compton](https://github.com/tryone144/compton)
 
 ![Screenshot](https://github.com/dartvader316/linux-setup/blob/master/screenshots/2019-05-30.jpg)
