@@ -29,7 +29,11 @@ gaps inner 20
 #smart_gaps on
 
 #Dont ask exit or not
-bindsym $mod+Shift+e exec i3-msg exit
+#bindsym $mod+Shift+e exec i3-msg exit
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+#screen off 
+bindsym $mod+l exec $HOME/.config/scripts/screenOff.sh
 
 #Other default Config settings:
 
@@ -50,10 +54,10 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+#bindsym $mod+j focus left
+#bindsym $mod+k focus down
+#bindsym $mod+l focus up
+#bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
