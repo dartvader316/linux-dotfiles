@@ -33,9 +33,9 @@ set $client_color0 #ffffff
 set $client_color1 #333333
 
 #client        			Border			Bg				text			indicator	child_border
-client.focused 			$client_color0 	$client_color0 	$client_color1 	#FF0000 	#FF0000
-client.focused_inactive $client_color1 	$client_color1 	$client_color0 	#FF0000 	#FF0000
-client.unfocused 		$client_color1 	$client_color1 	$client_color0 	#FF0000 	#FF0000
+client.focused 			$client_color0 	$client_color0 	$client_color1 	#FF0000 	$client_color1
+client.focused_inactive $client_color1 	$client_color1 	$client_color0 	#FF0000 	$client_color1
+client.unfocused 		$client_color1 	$client_color1 	$client_color0 	#FF0000 	$client_color1
 client.urgent 			#FF0000 		#FF0000 		#FF0000 		#FF0000 	#FF0000
 client.placeholder 		#FF0000 		#FF0000 		#FF0000 		#FF0000 	#FF0000
 
