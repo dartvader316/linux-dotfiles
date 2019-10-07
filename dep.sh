@@ -1,1 +1,1 @@
-sudo pacman -S adobe-source-code-pro-fonts ttf-roboto
+i3-gaps polybar adobe-source-code-pro-fonts ttf-roboto
