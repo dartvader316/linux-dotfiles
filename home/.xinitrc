@@ -1,6 +1,6 @@
 #!/bin/sh
 
-xrandr --auto
+xrandr --auto --dpi 96
 #sudo /usr/bin/prime-switch
 
 userresources=$HOME/.Xresources

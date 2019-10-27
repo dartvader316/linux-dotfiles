@@ -3,6 +3,11 @@
 #Set mod
 
 set $mod Mod4
+#Shutdown
+bindsym $mod+XF86PowerOff exec systemctl poweroff
+
+# start a terminal
+bindsym $mod+Return exec st
 
 #Comptom Support
 exec --no-startup-id "compton -b --config ~/.config/compton/config"
@@ -50,9 +55,6 @@ bindsym $mod+l exec $HOME/.config/scripts/screenOff.sh
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
-
-# start a terminal
-bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
