@@ -24,6 +24,7 @@ alias unbind-xkeys='~/.config/scripts/unbindXkeys.sh'
 alias view-image='sxiv'
 alias wine32='WINEPREFIX="$HOME/.wine/wine32/" WINEARCH=win32'
 alias wine64='WINEPREFIX="$HOME/.wine/wine64/" WINEARCH=win64'
+alias fse='fse; LASTDIR=`cat $HOME/.fse/.lastdir`; cd "$LASTDIR"'
 
 PS1='\[\e[0;32m\][@\u | \w] \$ \[\e[0m\]'
 
