@@ -174,7 +174,8 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
-format = <label>
+;format = %{A1:notify-send "$(ps axch -o cmd:20,%cpu --sort=-%cpu | head)":} <label> %{A}
+format = %{A1:dash ~/.config/polybar/scripts/cpu_ps.sh:}<label>%{A}
 ;format-foreground = ${colors.nocolor}
 format-prefix = " "
 label = %temperature-c%
@@ -182,10 +183,10 @@ label = %temperature-c%
 format-warn = <label-warn>
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.warncolor}
-
+ 
 [module/GPUid]
 type = custom/script
-exec = ~/.config/scripts/getGPUid.sh
+exec = dash ~/.config/polybar/scripts/getGPU.sh
 format = <label>
 ;format-foreground = ${colors.nocolor}
 format-prefix = " "

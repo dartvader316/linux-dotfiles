@@ -5,8 +5,22 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+PS1='\[\e[0;32m\][@\u | \w] \$ \[\e[0m\]'
+
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+
+alias lf=lfcd
 alias ls='ls --color=auto'
-alias battery='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|to\ full|percentage"'
+alias battery='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|to\
+full|percentage"'
 alias gui='startx'
 alias net-restart='sudo systemctl restart NetworkManager.service'
 alias use-nvidia-gpu='~/.config/scripts/useNvidiaGPU.sh'
@@ -19,13 +33,10 @@ alias screenrecord='bash ~/.config/scripts/screenrecord.sh'
 alias lc='ls | wc -l'
 alias screen-brightness='xbacklight -set'
 alias valgrind-deep-debug='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes -v'
-alias bind-mouse-to-keyboard='~/.config/scripts/bindMouseToKeys.sh'
-alias unbind-xkeys='~/.config/scripts/unbindXkeys.sh' 
+alias bind-mouse-to-keyboard='xbindkeys -f ~/.config/xbindkeys/myconfig'
+alias unbind-xkeys='killall xbindkeys'
 alias view-image='sxiv'
 alias wine32='WINEPREFIX="$HOME/.wine/wine32/" WINEARCH=win32'
 alias wine64='WINEPREFIX="$HOME/.wine/wine64/" WINEARCH=win64'
 alias fse='fse; LASTDIR=`cat $HOME/.fse/.lastdir`; cd "$LASTDIR"'
 
-PS1='\[\e[0;32m\][@\u | \w] \$ \[\e[0m\]'
-
-source /usr/share/chruby/chruby.sh

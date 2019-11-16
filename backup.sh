@@ -1,8 +1,9 @@
-cp $HOME/.bashrc ./home/.bashrc
-cp $HOME/.xinitrc ./home/.xinitrc
-cp $HOME/.Xresources ./home/.Xresources
-cp $HOME/.vimrc ./home/.vimrc
-cp $HOME/.config/compton/* ./home/.config/compton/
-cp $HOME/.config/i3/* ./home/.config/i3/
-cp $HOME/.config/polybar/* ./home/.config/polybar/
-cp $HOME/.config/scripts/* ./home/.config/scripts/
+cp -pRf $HOME/.bashrc ./home/.bashrc
+cp -pRf $HOME/.xinitrc ./home/.xinitrc
+cp -pRf $HOME/.Xresources ./home/.Xresources
+cp -pRf $HOME/.vimrc ./home/.vimrc
+cp -pRf $HOME/.config/compton/* ./home/.config/compton/
+cp -pRf $HOME/.config/i3/* ./home/.config/i3/
+cp -pRf $HOME/.config/polybar/* ./home/.config/polybar/
+cp -pRf $HOME/.config/scripts/* ./home/.config/scripts/
+cp -pRf $HOME/.config/dunst/* ./home/.config/dunst/
