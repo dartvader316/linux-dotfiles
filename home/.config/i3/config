@@ -1,16 +1,21 @@
 # i3 config file by dartvader316
 
 #Set mod
-
 set $mod Mod4
+
+#optimus-manager support
+exec /usr/bin/prime-offload
+
 #Shutdown
 bindsym $mod+XF86PowerOff exec systemctl poweroff
+#dunst for notifications
+exec --no-startup-id "dunst"
 
 # start a terminal
 bindsym $mod+Return exec st
 
 #Comptom Support
-exec --no-startup-id "compton -b --config ~/.config/compton/config"
+exec --no-startup-id "compton -b --backend glx --paint-on-overlay --vsync opengl-swc --config ~/.config/compton/config"
 
 #Language Changer
 exec setxkbmap -option 'grp:alt_shift_toggle' -layout ca,ru -variant eng,
@@ -49,7 +54,7 @@ client.placeholder 		#FF0000 		#FF0000 		#FF0000 		#FF0000 	#FF0000
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Yes' 'i3-msg exit'"
 
 #screen off 
-bindsym $mod+l exec $HOME/.config/scripts/screenOff.sh
+#bindsym $mod+l exec $HOME/.config/scripts/screenOff.sh
 
 #Other default Config settings:
 

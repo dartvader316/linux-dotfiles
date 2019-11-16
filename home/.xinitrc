@@ -1,6 +1,6 @@
 #!/bin/sh
 
-xrandr --auto --dpi 96
+xrandr --auto --dpi 96 
 #sudo /usr/bin/prime-switch
 
 userresources=$HOME/.Xresources
@@ -12,12 +12,6 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 
 if [ -f $sysresources ]; then
 
-
-
-
-
-
-
     xrdb -merge $sysresources
 
 fi
@@ -27,12 +21,6 @@ if [ -f $sysmodmap ]; then
 fi
 
 if [ -f "$userresources" ]; then
-
-
-
-
-
-
 
     xrdb -merge "$userresources"
 
@@ -52,11 +40,3 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 exec i3
-/usr/bin/prime-offload
-echo "launched" >> gui
-
-#twm &
-#xclock -geometry 50x50-1+1 &
-#xterm -geometry 80x50+494+51 &
-#xterm -geometry 80x20+494-0 &
-#exec xterm -geometry 80x66+0+0 -name login

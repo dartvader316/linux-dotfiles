@@ -3,8 +3,8 @@ backend = "glx"
 vsync = "opengl-swc";
 #glx-copy-from-front = true;
 #glx-swap-method = 2;
-xrender-sync = true;
-xrender-sync-fence = true;
+#xrender-sync = true;
+#xrender-sync-fence = true;
 
 shadow = true;
 #no-dock-shadow = true;
@@ -20,7 +20,17 @@ inactive-dim = 0.3;
 #blur-method = "kawase";
 #blur-strength = 12;
 
-fading = true;
-fade-delta = 7.5;
-fade-in-step = 0.1;
-fade-out-step = 0.1;
+#fading = true;
+#fade-delta = 7.5;
+#fade-in-step = 0.1;
+#fade-out-step = 0.1;
+
+shadow-exclude = [ 
+  "_NET_WM_STATE@:32a *= '_NET_WM_STATE_HIDDEN'"
+];
+
+# give urxvt 95% opacity, but make all hidden windows completely transparent
+opacity-rule = [ 
+  "95:class_g = 'st' && !_NET_WM_STATE@:32a",
+  "0:_NET_WM_STATE@:32a *= '_NET_WM_STATE_HIDDEN'"
+];
