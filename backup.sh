@@ -1,4 +1,5 @@
 cp -pRf $HOME/.bashrc ./home/.bashrc
+cp -pRf $HOME/.zshrc ./home/.zshrc
 cp -pRf $HOME/.xinitrc ./home/.xinitrc
 cp -pRf $HOME/.Xresources ./home/.Xresources
 cp -pRf $HOME/.vimrc ./home/.vimrc
