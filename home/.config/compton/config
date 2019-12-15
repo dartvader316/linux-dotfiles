@@ -3,7 +3,7 @@ backend = "glx"
 vsync = "opengl-swc";
 #glx-copy-from-front = true;
 #glx-swap-method = 2;
-#xrender-sync = true;
+xrender-sync = true;
 #xrender-sync-fence = true;
 
 shadow = true;
@@ -12,13 +12,14 @@ no-dnd-shadow = true;
 clear-shadow = true;
 inactive-dim = 0.3;
 
+#blur
 #blur-background = true;
 #blur-background-frame = true;
 #blur-background-fixed = true;
 
 #blur-kern = "3x3box";
 #blur-method = "kawase";
-#blur-strength = 12;
+#blur-strength = 5;
 
 #fading = true;
 #fade-delta = 7.5;

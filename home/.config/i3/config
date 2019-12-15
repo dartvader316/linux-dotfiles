@@ -54,7 +54,7 @@ client.placeholder 		#FF0000 		#FF0000 		#FF0000 		#FF0000 	#FF0000
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Yes' 'i3-msg exit'"
 
 #screen off 
-#bindsym $mod+l exec $HOME/.config/scripts/screenOff.sh
+bindsym $mod+l exec $HOME/.config/scripts/screenOff.sh
 
 #Other default Config settings:
 
