@@ -9,9 +9,9 @@
 ### My current setup info:
 
 ### OS: Arch Linux
-### Kernel: x86_64 Linux 5.1.5-arch1-2-ARCH
-### Shell: bash 5.0.7
-### WM: i3-gaps
+### Kernel: 5.4.8-arch1-1 
+### Shell: zsh 5.7.1
+### WM: i3-gaps-next
 ### Compton: [tryone144/compton](https://github.com/tryone144/compton)
 
-![Screenshot](https://github.com/dartvader316/linux-setup/blob/master/screenshots/2019-05-30.jpg)
+![Screenshot](https://github.com/dartvader316/linux-setup/blob/master/screenshots/2020-01-11.jpg)
