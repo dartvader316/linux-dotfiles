@@ -13,7 +13,7 @@ urxvt.foreground: gray
 URxvt.cursorUnderline: true
 URxvt.cursorBlink: true
 !!Borders
-URxvt.internalBorder:  20
+URxvt.internalBorder:  10
 !!Transparency
 urxvt.transparent:	true
 urxvt.shading:	20
@@ -45,7 +45,7 @@ urxvt.matcher.button: C1
 URxvt.keysym.Control-0x2b: perl:font-size:increase
 URxvt.keysym.Control-0x2d: perl:font-size:decrease
 
-!! Yeah, I am one of those, who use these keys in Vim :-(
+!!
 urxvt.keysym.Home:          \033[1~
 urxvt.keysym.End:           \033[4~
 urxvt.keysym.Control-Up:    \033[1;5A
