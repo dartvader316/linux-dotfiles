@@ -16,13 +16,30 @@ nocolor = #FF0000
 [icons]
 workspace = ""
 
-[bar/mybar]
-;monitor = ${env:MONITOR:HDMI-1}
+[bar/dummy]
+monitor = ${env:MONITOR:eDP-1}
 width = 100%
-height = 30
-;offset-x = 100
-;offset-y = 10
+height = 40
+offset-y = 10
+background = #00000000
+fixed-center = false
+
+modules-left = blank
+;override-redirect = true 
+;wm-stack = i3
+
+[module/blank]
+type = internal/xwindow
+label = " "
+
+[bar/main]
+monitor = ${env:MONITOR:eDP-1}
 fixed-center = true
+width = 1880
+height = 30
+offset-x = 20
+offset-y = 14
+
 
 background = ${colors.background}
 foreground = ${colors.defaultfontcolor}
@@ -55,14 +72,15 @@ modules-right = xkeyboard  wlan battery temperature GPUid
 tray-position = none
 tray-padding = 2
 
-;wm-restack = i3
-;override-redirect = true
+wm-restack = i3
+override-redirect = true
 
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
@@ -202,7 +220,7 @@ screenchange-reload = true
 ;compositing-background = screen
 ;compositing-foreground = source
 ;compositing-border = over
-pseudo-transparency = true
+;pseudo-transparency = true
 
 [global/wm]
 margin-top = 5
