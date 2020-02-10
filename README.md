@@ -9,9 +9,8 @@
 ### My current setup info:
 
 ### OS: Arch Linux
-### Kernel: 5.4.8-arch1-1 
-### Shell: zsh 5.7.1
-### WM: i3-gaps-next
-### Compton: [tryone144/compton](https://github.com/tryone144/compton)
+### Shell: zsh 
+### WM: i3-gaps-rounded
+### Compositor: Picom
 
-![Screenshot](https://github.com/dartvader316/linux-setup/blob/master/screenshots/2020-01-11.jpg)
+![Screenshot](https://github.com/dartvader316/linux-setup/blob/master/screenshots/2020-02-10.jpg)

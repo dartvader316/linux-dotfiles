@@ -3,7 +3,7 @@
 
 [colors]
 defaultfontcolor = #DDDDDD
-background = ${xrdb:color0:#cc000000}
+background = #151515
 backgroup-opacity = 0
 border-color = ;
 
@@ -17,7 +17,7 @@ nocolor = #FF0000
 workspace = ""
 
 [bar/dummy]
-monitor = ${env:MONITOR:eDP-1}
+;monitor = ${env:MONITOR:eDP-1}
 width = 100%
 height = 40
 offset-y = 10
@@ -25,21 +25,20 @@ background = #00000000
 fixed-center = false
 
 modules-left = blank
-;override-redirect = true 
-;wm-stack = i3
 
 [module/blank]
 type = internal/xwindow
 label = " "
 
 [bar/main]
-monitor = ${env:MONITOR:eDP-1}
+;monitor = ${env:MONITOR:eDP-1}
 fixed-center = true
 width = 1880
 height = 30
 offset-x = 20
-offset-y = 14
-
+offset-y = 15
+;Rounded corners
+radius = 2
 
 background = ${colors.background}
 foreground = ${colors.defaultfontcolor}
@@ -197,7 +196,7 @@ thermal-zone = 0
 warn-temperature = 60
 
 ;format = %{A1:notify-send "$(ps axch -o cmd:20,%cpu --sort=-%cpu | head)":} <label> %{A}
-format = %{A1:dash ~/.config/polybar/scripts/cpu_ps.sh:}<label>%{A}
+format = %{A1:dash ~/.config/scripts/cpu-ps.sh:}<label>%{A}
 ;format-foreground = ${colors.nocolor}
 format-prefix = " "
 label = %temperature-c%
@@ -208,7 +207,7 @@ label-warn-foreground = ${colors.warncolor}
  
 [module/GPUid]
 type = custom/script
-exec = dash ~/.config/polybar/scripts/getGPU.sh
+exec = dash ~/.config/scripts/get-gpu.sh
 format = <label>
 ;format-foreground = ${colors.nocolor}
 format-prefix = " "

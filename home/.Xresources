@@ -1,22 +1,27 @@
+!!Cursor theme
+Xcursor.theme: Deepin-Cursor
+
+
 !!idk but pasted it)
 Xft.antialias:  true
 Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hintstyle:  hintfull
 
-
 urxvt.termName: rxvt-unicode
 urxvt.scrollBar: false
-urxvt.background: black
-urxvt.foreground: gray
+!! I AM NOT FAN OF DC
+urxvt.background: #151515 
+urxvt.foreground: grey
+
 !!Cursor Config
 URxvt.cursorUnderline: true
 URxvt.cursorBlink: true
 !!Borders
 URxvt.internalBorder:  10
 !!Transparency
-urxvt.transparent:	true
-urxvt.shading:	20
+urxvt.transparent:	false
+!!urxvt.shading:	30
 
 !! CTRL +SHIFT  + C/V works
 urxvt.keysym.Shift-Control-V: eval:paste_clipboard
@@ -28,7 +33,7 @@ URxvt.iso14755_52: false
 !! Font prefferenes
 
 #define termfont      xft:sourcecodepro:pixelsize=20:antialias=true
-URxvt.font:           termfont
+URxvt.font:           termfont, xft:symbola
 URxvt.boldFont:       termfont
 URxvt.italicFont:     termfont
 URxvt.boldItalicFont: termfont
@@ -37,7 +42,7 @@ urxvt.letterSpace: -1
 urxvt.saveLines: 1000
 
 !! Perl extensions
-urxvt.perl-ext-common: default,matcher,font-size
+urxvt.perl-ext-common: default,matcher
 !! Open urls in browser with Control-Click
 urxvt.urlLauncher: /usr/bin/chromium
 urxvt.matcher.button: C1
@@ -56,20 +61,20 @@ urxvt.keysym.Control-Right: \033[1;5C
 
 !! Tango color theme
 !! Strange - it matches tango from gnome-terminal, but looks different
-URxvt.color0: rgb:00/00/00
-URxvt.color1: rgb:CC/00/00
-URxvt.color2: rgb:4E/9A/06
-URxvt.color3: rgb:C4/A0/00
-URxvt.color4: rgb:34/65/A4
-URxvt.color5: rgb:75/50/7B
-URxvt.color6: rgb:06/98/9A
-URxvt.color7: rgb:D3/D7/CF
-URxvt.color8: rgb:55/57/53
-URxvt.color9: rgb:EF/29/29
-URxvt.color10: rgb:8A/E2/34
-URxvt.color11: rgb:FC/E9/4F
-URxvt.color12: rgb:72/9F/CF
-URxvt.color13: rgb:AD/7F/A8
-URxvt.color14: rgb:34/E2/E2
-URxvt.color15: rgb:EE/EE/EC
-URxvt.colorBD: rgb:ff/ff/ff
+URxvt.color0: #000000
+URxvt.color1: #CC0000
+URxvt.color2: #4E9A06
+URxvt.color3: #C4A000
+URxvt.color4: #3465A4
+URxvt.color5: #75507B
+URxvt.color6: #06989A
+URxvt.color7: #D3D7CF
+URxvt.color8: #555753
+URxvt.color9: #EF2929
+URxvt.color10: #8AE234
+URxvt.color11: #FCE94F
+URxvt.color12: #729FCF
+URxvt.color13: #AD7FA8
+URxvt.color14: #34E2E2
+URxvt.color15: #EEEEEC
+URxvt.colorBD: #ffffff

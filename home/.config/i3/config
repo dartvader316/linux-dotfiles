@@ -12,10 +12,10 @@ bindsym $mod+XF86PowerOff exec systemctl poweroff
 exec --no-startup-id "dunst"
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec st
 
 #Comptom Support
-exec --no-startup-id "compton -b --backend glx --paint-on-overlay --vsync opengl-swc --config ~/.config/compton/config"
+exec --no-startup-id "picom --config ~/.config/compton/config"
 
 #Language Changer
 exec setxkbmap -option 'grp:alt_shift_toggle' -layout ca,ru -variant eng,
@@ -27,6 +27,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 #Screenshot
 bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
+bindsym $mod+p exec "flameshot gui"
 
 # Main font
 font pango:Roboto-medium 8
@@ -39,9 +40,11 @@ gaps inner 20
 #gaps outer 10
 #smart_gaps on
 
+border_radius 1
+
 #colors
-set $client_color0 #ffffff
-set $client_color1 #333333
+set $client_color0 #DDDDDD
+set $client_color1 #151515
 
 #client        			Border			Bg			text			indicator	child_border
 client.focused 			$client_color0 		$client_color0 		$client_color1 		#FF0000 	$client_color1
@@ -55,7 +58,7 @@ client.placeholder 		#FF0000 		#FF0000 		#FF0000 		#FF0000 	#FF0000
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Yes' 'i3-msg exit'"
 
 #screen off 
-bindsym $mod+l exec $HOME/.config/scripts/screenOff.sh
+bindsym $mod+l exec $HOME/.config/scripts/screen-off.sh
 
 #Other default Config settings:
 
