@@ -1,1 +1,9 @@
-i3-gaps polybar dunst adobe-source-code-pro-fonts ttf-roboto
+nitrogen i3-gaps-rounded polybar dunst 
+
+Fonts:
+Arch linux:
+adobe-source-code-pro-fonts ttf-roboto
+Void linux:
+fonts-roboto-ttf font-adobe-source-code-pro font-material-design-icons
+
+

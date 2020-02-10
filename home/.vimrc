@@ -6,6 +6,7 @@ set visualbell
 set t_Co=256
 set clipboard=unnamedplus
 set backspace=indent,eol,start
+set mouse=a
 syntax on
 imap ;; <Esc>               
 
