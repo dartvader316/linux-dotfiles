@@ -1,6 +1,6 @@
 #!/bin/bash
 __copy(){
-	[[ ! -d $2 ]] && mkdir -p $2
+	[[ ! -d $2 ]] && [[ ! -f $2 ]] && mkdir -p $2
 	
 	if [ -d $1 ]; then
 		cp -Rf "$1"/* "$2"
