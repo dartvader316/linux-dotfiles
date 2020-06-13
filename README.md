@@ -5,12 +5,12 @@
 
 # Read Me
 
-## Its only my current setup what tested ONLY in my pc's.
-### My current setup info:
+Its my current linux dotfiles that were tested ONLY in my PC's.
+My current setup info:
 
-### OS: Arch Linux
-### Shell: zsh 
-### WM: i3-gaps-rounded
-### Compositor: Picom
+* OS: Arch Linux
+* Shell: zsh 
+* WM: i3-gaps-rounded
+* Compositor: Picom
 
 ![Screenshot](https://github.com/dartvader316/linux-setup/blob/master/screenshots/2020-02-10.jpg)
