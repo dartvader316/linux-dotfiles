@@ -1,0 +1,9 @@
+.zshrc
+.xinitrc
+.Xresources
+.vimrc
+.config/compton
+.config/i3
+.config/polybar
+.config/scripts
+.config/dunst
